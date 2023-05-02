@@ -39,7 +39,7 @@ const Home = () => {
 {
 foods.map(food=><Food key={food._id} food={food}></Food> )
 }
-        </div>
+        </div> 
     </div>
 </section>
 
