@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 import "./home.css";
 import Food from "./Food";
+import Chef from "../chef/Chef";
+import Contact from "./Contact";
+
+
 
 const Home = () => {
     const [foods,setFoods] = useState([]);
@@ -41,8 +45,13 @@ foods.map(food=><Food key={food._id} food={food}></Food> )
 }
         </div> 
     </div>
+</section> 
+<section className="w-3/4 mx-auto">
+<Chef></Chef>
 </section>
-
+<section className="w-5/6 mx-auto">
+  <Contact></Contact>
+</section>
     </div>
   );
 };
