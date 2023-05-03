@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 import loginImg from "../../../assets/imgs/login.svg";
 
@@ -51,6 +53,15 @@ const Login = () => {
                   value="login"
                 />
               </div>
+<div className="my-3">
+<div className="divider">OR</div>
+<div className="flex gap-4 justify-center">
+    <button className="btn btn-outline flex gap-3 items-center">Login With <FcGoogle/> </button>
+    <button className="btn btn-outline flex gap-3 items-center">Login With  <FaGithub/> </button>
+</div>
+</div>
+
+
               <div className="my-3">
     
 <span className="label-text">Have any Account?</span>
