@@ -3,7 +3,7 @@ const Contact = () => {
     return (
         <div>
              <section className="mb-32 text-gray-800">
-<h1 className="text-center text-4xl font-bold my-12 mb-20">Get in Touch</h1>
+<h1 className="text-center text-4xl font-bold my-6 ">Get in Touch</h1>
 <div className="relative overflow-hidden bg-no-repeat bg-cover"
  >
 </div>

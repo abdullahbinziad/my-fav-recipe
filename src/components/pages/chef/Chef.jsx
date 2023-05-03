@@ -7,7 +7,7 @@ const Chef = () => {
   const [chefs,setChefs] = useState([]);
 
 useEffect(()=>{
-    fetch('/chef.json')
+    fetch('http://localhost:3000/chef')
     .then(res=> res.json())
     .then(data=> {
         console.log(data);
@@ -16,8 +16,8 @@ useEffect(()=>{
 },[])
 
   return (
-    <div>
-      <div className="container my-24 px-6 mx-auto">
+    <div className="w-3/4 mx-auto">
+      <div className="container my-12 px-6 mx-auto">
         <section className="mb-32 text-center lg:text-left">
           <h2 className="text-3xl font-bold mb-12 text-center">
             Meet the <u className="text-blue-600">CHEF</u>

@@ -1,20 +1,21 @@
-import { useEffect, useState } from "react";
+
 import "./home.css";
 import Food from "./Food";
 import Chef from "../chef/Chef";
 import Contact from "./Contact";
+import { useLoaderData } from "react-router-dom";
+import FoodCardForHOme from "./FoodCardForHOme";
 
 
 
 const Home = () => {
-    const [foods,setFoods] = useState([]);
 
-    useEffect(()=>{
-        fetch('/food.json')
-        .then(res=> res.json())
-        .then(data =>setFoods(data) )
-    },[])
 
+  const foods = useLoaderData();
+  console.log(foods);
+
+
+   
 
 
   return (
@@ -39,14 +40,14 @@ const Home = () => {
 
     <h1 className="text-3xl font-bold text-center my-4 my-8">Most Wanted Recipe</h1>
     <div className="">
-        <div className="grid grid-cols-4	gap-3">
+        <div className="grid grid-cols-5	gap-3">
 {
-foods.map(food=><Food key={food._id} food={food}></Food> )
+foods.map(food=><FoodCardForHOme key={food._id} food={food}></FoodCardForHOme> )
 }
         </div> 
     </div>
 </section> 
-<section className="w-3/4 mx-auto">
+<section className="">
 <Chef></Chef>
 </section>
 <section className="w-5/6 mx-auto">

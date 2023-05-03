@@ -1,5 +1,6 @@
 
 import { FaThumbsUp } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const ChefCards = (props) => {
  
@@ -15,7 +16,9 @@ const ChefCards = (props) => {
                   <p> Number of Recipe : <span className="font-semibold">{numberOfRecipes}</span> </p>
                   <div className="card-actions flex flex-row-reverse items-center justify-between">
             <div className='flex gap-2 items-center self-center'>{likes} <  FaThumbsUp className='text-xl text-red-500'></FaThumbsUp></div>
-              <button className="w-18 btn btn-sm">View Recipes</button>
+           
+           <Link to={`/chef/${_id}`} className="w-18 btn btn-sm">View Recipes</Link>
+           
                   </div>
                 </div>
               </div>

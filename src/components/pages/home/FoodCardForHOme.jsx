@@ -1,7 +1,7 @@
 
 
-const Food = (props) => {
-    const {_id, name, ingredients, cookingMethod, rating, price,image }= props.recipe;
+const FoodCardForHOme = (props) => {
+    const {_id, name, ingredients, cookingMethod, rating, price,image }= props.food;
     return (
         <div className="card  bg-base-100 shadow-xl">
         <figure><img src={image} alt="Shoes" /></figure>
@@ -14,7 +14,7 @@ const Food = (props) => {
           <div className="">
    
             {
-                ingredients.map(n=>   <div className=" badge badge-primary mx-1	">{n}</div>).slice(0,5)
+                ingredients.map(n=>   <div className=" badge badge-primary mx-1	">{n}</div>).slice(0,3)
             }
           </div>
         </div>
@@ -22,4 +22,4 @@ const Food = (props) => {
     );
 };
 
-export default Food;
+export default FoodCardForHOme;

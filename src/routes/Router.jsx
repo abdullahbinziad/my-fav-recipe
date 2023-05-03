@@ -16,7 +16,8 @@ export const router= createBrowserRouter([
         children:[
             {
                 path:'/',
-                element:<Home></Home>
+                element:<Home></Home>,
+                loader: ()=> fetch('http://localhost:3000/food')
             },
             {
                 path:'/login',
@@ -26,16 +27,21 @@ export const router= createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
+            
             {
                 path:'/chef',
-                element: <PrivateRoute> <Chef></Chef> </PrivateRoute>
-            },
-            // {
-            //     path:'/chef/:id',
-            //     element: <PrivateRoute> <ChefSingle></ChefSingle> </PrivateRoute>,
-            //     loader: ()=> fetch(``)
+                element: <Chef></Chef>,
+                loader: ()=> fetch(`http://localhost:3000/chef/`)
                 
-            // },
+                
+            },
+            {
+                path:'/chef/:id',
+                element: <PrivateRoute> <ChefSingle></ChefSingle> </PrivateRoute>,
+                loader: ({params})=> fetch(`http://localhost:3000/chef/${params.id}`)
+                
+                
+            },
             {
                 path:'/blogs',
                 element: <PrivateRoute><Blogs></Blogs></PrivateRoute>
