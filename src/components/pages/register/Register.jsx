@@ -6,7 +6,7 @@ import { AuthContext } from "../../../authprovider/AuthProvider";
 
 const Register = () => {
   //read the auth context
-  const { register,userProfile } = useContext(AuthContext);
+  const { registerByEmailPassword,userProfile } = useContext(AuthContext);
   const [message,setMessage] = useState(<p></p>)
 
   //   handle on submit
@@ -19,7 +19,7 @@ const Register = () => {
     const password = form.password.value;
 
 
-    register(email, password)
+    registerByEmailPassword(email, password)
       .then((userCredential) => {
         const user = userCredential.user;
         console.log(user);

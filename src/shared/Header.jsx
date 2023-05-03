@@ -1,8 +1,14 @@
+import { useContext } from "react";
+import { AuthContext } from "../authprovider/AuthProvider";
+import { Link } from "react-router-dom";
 
 
 
 const Header = () => {
  
+const {user} = useContext(AuthContext)
+
+console.log(user);
 const menu =
 <>
 
@@ -37,7 +43,16 @@ menu
     </ul>
   </div>
   <div className="navbar-end">
-    <img className="w-8" src="https://img.freepik.com/premium-vector/man-avatar-profile-round-icon_24640-14044.jpg?w=2000" alt="" />
+  
+  {
+    user 
+    ? <div className="tooltip tooltip-left" data-tip={user.displayName}>
+       <img className="w-8 rounded-full" src={user.photoURL} alt="" />
+        </div>
+  : <Link className="btn btn-sm" to='/login'>Login</Link>
+
+  }
+   
   </div>
 </div>
           </nav>
