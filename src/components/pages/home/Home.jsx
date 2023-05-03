@@ -1,6 +1,6 @@
 
 import "./home.css";
-import Food from "./Food";
+
 import Chef from "../chef/Chef";
 import Contact from "./Contact";
 import { useLoaderData } from "react-router-dom";
