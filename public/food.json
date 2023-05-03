@@ -24,6 +24,14 @@
           "price": 14.99,
           "image": "https://media.cnn.com/api/v1/images/stellar/prod/220428140436-04-classic-american-hamburgers.jpg?c=original"
         },
+        {"_id":"612f82dc8432550sa01c579831",
+          "name": "Chicken Tikka Masala",
+          "ingredients": ["Chicken", "Yogurt", "Tomato sauce", "Ginger", "Garam masala"],
+          "cookingMethod": "Marinate chicken, grill, and simmer in tomato-based sauce",
+          "rating": 4.7,
+          "price": 14.99,
+          "image": "https://media.cnn.com/api/v1/images/stellar/prod/220428140436-04-classic-american-hamburgers.jpg?c=original"
+        },
         {"_id":"612f82dc843255001c579832",
           "name": "Caesar Salad",
           "ingredients": ["Romaine lettuce", "Croutons", "Parmesan cheese", "Caesar dressing", "Anchovies"],

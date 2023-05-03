@@ -13,7 +13,7 @@ const menu =
 </>
 
     return (
-        <div className="w-100">
+        <div className="w-100 shadow-sm">
           <nav className="w-3/4 mx-auto">
           <div className="navbar bg-base-100">
   <div className="navbar-start">

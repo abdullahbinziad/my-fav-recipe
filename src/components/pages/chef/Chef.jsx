@@ -23,7 +23,7 @@ useEffect(()=>{
             Meet the <u className="text-blue-600">CHEF</u>
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-2 xl:gap-x-4">
+          <div className="grid md:grid-cols-2 gap-3 xl:gap-x-4">
          {
             chefs.map(chef=> <ChefCards key={chef._id} chef={chef}></ChefCards>)
          }
