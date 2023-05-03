@@ -12,16 +12,17 @@ console.log(user);
 const menu =
 <>
 
-<li> <a href="">Home</a> </li>
-<li> <a href="">About</a> </li>
-<li> <a href="">Blog</a> </li>
+<li> <Link to="/">Home</Link> </li>
+<li> <Link to="/about">About</Link> </li>
+<li> <Link to="/blogs">Blog</Link> </li>
+<li> <Link to="/chef">Chefs</Link> </li>
 
 </>
 
     return (
-        <div className="w-100 shadow-sm">
-          <nav className="w-3/4 mx-auto">
-          <div className="navbar bg-base-100">
+        <div className="w-100 shadow-sm  bg-slate-100 ">
+          <nav className="w-3/4 mx-auto  ">
+          <div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">

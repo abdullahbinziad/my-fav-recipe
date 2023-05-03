@@ -5,6 +5,8 @@ import Blogs from "../components/pages/blogs/Blogs";
 import Login from "../components/pages/login/Login";
 import Register from "../components/pages/register/Register";
 import Chef from "../components/pages/chef/Chef";
+import ChefSingle from "../components/pages/chef/ChefSingle";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router= createBrowserRouter([
@@ -26,11 +28,17 @@ export const router= createBrowserRouter([
             },
             {
                 path:'/chef',
-                element:<Chef></Chef>
+                element: <PrivateRoute> <Chef></Chef> </PrivateRoute>
             },
+            // {
+            //     path:'/chef/:id',
+            //     element: <PrivateRoute> <ChefSingle></ChefSingle> </PrivateRoute>,
+            //     loader: ()=> fetch(``)
+                
+            // },
             {
-                path:'/logs',
-                element:<Blogs></Blogs>
+                path:'/blogs',
+                element: <PrivateRoute><Blogs></Blogs></PrivateRoute>
             }
         ]
     }

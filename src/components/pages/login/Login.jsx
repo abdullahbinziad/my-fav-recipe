@@ -1,16 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 
 import loginImg from "../../../assets/imgs/login.svg";
-import { useContext,  } from "react";
+import { useContext, useState,  } from "react";
 import { AuthContext } from "../../../authprovider/AuthProvider";
 
 const Login = () => {
 
-const {loginByEmailPassword}= useContext(AuthContext) ;
+const nevigate = useNavigate()
+const location = useLocation()
+const from = location.state?.from?.pathname || '/' ;
 
-// const [message,setMessage] = useState(<p></p>)
+const {loginByEmailPassword,signinWithGoogle,signinWithGithub}= useContext(AuthContext) ;
+
+const [message,setMessage] = useState("")
 
   const loginOnSubmit = (event) => {
     event.preventDefault();
@@ -22,14 +26,13 @@ const {loginByEmailPassword}= useContext(AuthContext) ;
         // Signed in 
         const user = userCredential.user;
         console.log(user);
-        // setMessage(<p className="text-blue-700">{user}</p>)
+        nevigate(from,{replace:true})
         // ...
       })
       .catch((error) => {
-     
         const errorMessage = error.message;
         console.log(errorMessage);
-        // setMessage(<p className="text-red-700">{errorMessage}</p>)
+        setMessage(errorMessage)
         
       });
     
@@ -44,7 +47,7 @@ const {loginByEmailPassword}= useContext(AuthContext) ;
             <img className="w-3/4" src={loginImg} alt="" />
           </div>
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            <form onSubmit={loginOnSubmit} className="p-8">
+            <form onSubmit={loginOnSubmit} className="px-8 pt-8">
               <h1 className="text-5xl text-center font-bold">Login Now!</h1>
 
               <div className="form-control">
@@ -76,24 +79,40 @@ const {loginByEmailPassword}= useContext(AuthContext) ;
                   value="login"
                 />
               </div>
-              {/* <span>{message}</span> */}
-<div className="my-3">
+             
+            {
+                message &&   <span className="text-red-700 my-3">{message.split("Firebase: Error (auth/")}</span>
+            }
+        
+             </form>
+<div className="my-1">
 <div className="divider">OR</div>
 <div className="flex gap-4 justify-center">
-    <button className="btn btn-outline flex gap-3 items-center">Login With <FcGoogle/> </button>
-    <button className="btn btn-outline flex gap-3 items-center">Login With  <FaGithub/> </button>
+    <button onClick={()=>{
+        signinWithGoogle()
+        .then(()=>{
+            nevigate(from,{replace:true})
+        })
+        }} className="btn btn-outline flex gap-3 items-center">Login With <FcGoogle/> </button>
+    <button onClick={()=>{
+        signinWithGithub()
+        .then(()=>{
+            nevigate(from,{replace:true})
+        })
+        }} className="btn btn-outline flex gap-3 items-center">Login With  <FaGithub/> </button>
 </div>
-</div>
-
-
-              <div className="my-3">
+<div className="px-6 m-6 text-center">
     
-<span className="label-text">Have any Account?</span>
-            <Link to="/register" className="py-5 text-blue-400 ">
-              SignUp
-            </Link>
+    <span className="label-text">Have any Account?</span>
+                <Link to="/register" className=" text-blue-400 ">
+                  SignUp
+                </Link>
+    </div>
 </div>
-            </form>
+
+
+           
+            
 
           </div>
         </div>
