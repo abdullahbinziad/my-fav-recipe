@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
  
-const {user} = useContext(AuthContext)
+const {user,logout} = useContext(AuthContext)
 
 console.log(user);
 const menu =
@@ -33,7 +33,7 @@ const menu =
        }
       </ul>
     </div>
-    <a className="btn btn-ghost normal-case text-xl">MyFavRecipe</a>
+  <Link className="btn btn-ghost normal-case text-xl"> MyFavRecipe</Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
@@ -46,9 +46,12 @@ menu
   
   {
     user 
-    ? <div className="tooltip tooltip-left" data-tip={user.displayName}>
+    ? <>
+    <div className="tooltip tooltip-left" data-tip={user.displayName}>
        <img className="w-8 rounded-full" src={user.photoURL} alt="" />
         </div>
+        <Link onClick={logout} className="btn btn-xs mx-2" >Logout</Link>
+    </>
   : <Link className="btn btn-sm" to='/login'>Login</Link>
 
   }
