@@ -4,7 +4,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import { HashLoader } from "react-spinners";
 
 
-const PrivateRoute = ({children}) => {
+const PrivateRoute = (children) => {
 
   const  location= useLocation()
  const{user,loading} = useContext(AuthContext)
@@ -14,10 +14,10 @@ if(loading){
 }
 
 if(user){
-    return children 
+    return children.children; 
 }
 
-else return <Navigate to="./login" state={{from: location }} replace></Navigate>
+else return <Navigate to="/login" state={{from: location }} replace></Navigate>
     
 };
 
