@@ -7,6 +7,7 @@ import Register from "../components/pages/register/Register";
 import Chef from "../components/pages/chef/Chef";
 import ChefSingle from "../components/pages/chef/ChefSingle";
 import PrivateRoute from "./PrivateRoute";
+import Page404 from "../shared/Page404";
 
 
 export const router= createBrowserRouter([
@@ -45,6 +46,10 @@ export const router= createBrowserRouter([
             {
                 path:'/blogs',
                 element: <PrivateRoute><Blogs></Blogs></PrivateRoute>
+            },
+            {
+                path:'*',
+                element: <Page404></Page404>
             }
         ]
     }
