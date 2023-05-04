@@ -16,10 +16,10 @@ useEffect(()=>{
 },[])
 
   return (
-    <div className="w-3/4 mx-auto">
-      <div className="container my-12 px-6 mx-auto">
-        <section className="mb-32 text-center lg:text-left">
-          <h2 className="text-3xl font-bold mb-12 text-center">
+    <div className="md:w-3/4   mx-auto">
+      <div className="container my-12 md:px-6 px-3 mx-auto">
+        <section className=" md:mb-24 mb-16 text-center lg:text-left">
+          <h2 className="text-5xl font-bold md:my-20 my-4 text-center">
             Meet the <u className="text-blue-600">CHEF</u>
           </h2>
 

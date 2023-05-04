@@ -20,15 +20,12 @@ const Home = () => {
 
   return (
     <div className="">
-      <section className="w-3/4 mx-auto">
-        <div id="hero" className="hero">
-          <div className="hero-content justify-end px-16 flex-col lg:flex-row-reverse">
-            <div className="w-1/2 text-white">
-              <h1 className="text-5xl font-bold">Heaven of Testy</h1>
-              <p className="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
+      <section className="md:w-3/4 mx-auto">
+        <div id="hero" className="hero md:rounded-lg md:min-h-[500px] min-h-[400px]">
+          <div className=" hero-content p-2 justify-end px-16 flex-col lg:flex-row-reverse">
+            <div className="md:w-3/4 text-white ">
+              <h1 className="text-5xl font-bold">Heaven of <span className="text-yellow-400">Testy</span></h1>
+              <p className="md:py-6 py-2 text-xl">The speciality of a best recipe lies in its ability to delight the senses and leave a lasting impression. It captures the perfect balance of flavors, textures, and aromas. It showcases unique and high-quality ingredients, prepared with precision and expertise.
               </p>
               <button className="btn btn-primary">Explore Recipe</button>
             </div>
@@ -36,11 +33,11 @@ const Home = () => {
         </div>
       </section>
 
-<section className="w-3/4 mx-auto my-8 ">
+<section className="md:w-3/4 p-2 md:p-0 mx-auto my-8 ">
 
-    <h1 className="text-3xl font-bold text-center my-4 my-8">Most Wanted Recipe</h1>
+    <h1 className="md:text-5xl text-3xl font-bold text-center my-12">Most <span className="text-red-700">Wanted</span> Recipe</h1>
     <div className="">
-        <div className="grid grid-cols-5	gap-3">
+        <div className="grid md:grid-cols-4 grid-cols-2	gap-3">
 {
 foods.map(food=><FoodCardForHOme key={food._id} food={food}></FoodCardForHOme> )
 }

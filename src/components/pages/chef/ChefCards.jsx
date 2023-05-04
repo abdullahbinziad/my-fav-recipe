@@ -8,13 +8,13 @@ const ChefCards = (props) => {
 
 
             return (
-                <div className="card lg:card-side bg-base-100 shadow-xl">
-                <figure><img className='w-56 rounded-lg' src={chefPicture} alt="Album"/></figure>
-                <div className="p-6 space-y-2">
+                <div className="md:card flex justify-between items-center lg:card-side bg-base-100 shadow-xl rounded-lg p-3">
+                <figure><img className='md:w-56 w-36	 rounded-lg' src={chefPicture} alt="Album"/></figure>
+                <div className="md:p-6 p-3 md:space-y-2">
                   <h2 className="card-title">{chefName}</h2>
-                  <p>work Experience : <span className="font-semibold"> {yearsOfExperience} Years  </span>  </p>
-                  <p> Number of Recipe : <span className="font-semibold">{numberOfRecipes}</span> </p>
-                  <div className="card-actions flex flex-row-reverse items-center justify-between">
+                  <p className='text-left'>work Experience : <span className="font-semibold"> {yearsOfExperience} Years  </span>  </p>
+                  <p className='text-left'> Number of Recipe : <span className="font-semibold">{numberOfRecipes}</span> </p>
+                  <div className="card-actions flex md:flex-row-reverse items-center justify-between">
             <div className='flex gap-2 items-center self-center'>{likes} <  FaThumbsUp className='text-xl text-red-500'></FaThumbsUp></div>
            
            <Link to={`/chef/${_id}`} className="w-18 btn btn-sm">View Recipes</Link>

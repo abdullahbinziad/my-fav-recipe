@@ -11,7 +11,7 @@ const Food = (props) => {
     const {_id, name, ingredients, cookingMethod, rating, price,image }= props.recipe;
     return (
         <div className="card  bg-base-100 shadow-xl relative">
-           <div onClick={()=>notify(name)} className="badge border-0 bg-red-700 absolute top-0 right-0 p-3 m-2 cursor-pointer">Add to Fav  <MdFavorite className='m-1 text-xl'></MdFavorite> </div>
+           <div onClick={()=>notify(name)} className="badge border-0 bg-red-700 absolute top-0 right-0 p-3 m-2 cursor-pointer">Add to Fav<MdFavorite className='m-1 text-xl'></MdFavorite> </div>
            <ToastContainer />
 
         <figure><img src={image} alt="Shoes" /></figure>

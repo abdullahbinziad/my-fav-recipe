@@ -3,7 +3,7 @@
 const Footer = () => {
     return (
       <div className="w-100 bg-base-200 mt-12">
-          <footer className="footer p-10  text-base-content w-3/4 mx-auto">
+          <footer className="footer p-10 grid-cols-2 md:grid-cols-4 text-base-content w-3/4 mx-auto">
   <div>
     <span className="footer-title">Services</span> 
     <a className="link link-hover">Branding</a> 

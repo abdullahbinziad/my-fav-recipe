@@ -23,7 +23,7 @@ const menu =
 
     return (
         <div className="w-100 shadow-md  bg-base-100">
-          <nav className="w-3/4 mx-auto  ">
+          <nav className="md:w-3/4 mx-auto  ">
           <div className="navbar">
   <div className="navbar-start">
     <div className="dropdown">
