@@ -8,9 +8,9 @@ const ChefCards = (props) => {
 
 
             return (
-                <div className="md:card flex justify-between items-center lg:card-side bg-base-100 shadow-xl rounded-lg p-3">
+                <div className=" flex justify-between items-center card-side bg-base-100 shadow-xl rounded-lg p-3">
                 <figure><img className='md:w-56 w-36	 rounded-lg' src={chefPicture} alt="Album"/></figure>
-                <div className="md:p-6 p-3 md:space-y-2">
+                <div className="md:p-2 p-3 md:space-y-2">
                   <h2 className="card-title">{chefName}</h2>
                   <p className='text-left'>work Experience : <span className="font-semibold"> {yearsOfExperience} Years  </span>  </p>
                   <p className='text-left'> Number of Recipe : <span className="font-semibold">{numberOfRecipes}</span> </p>

@@ -23,9 +23,9 @@ const Home = () => {
       <section className="md:w-3/4 mx-auto">
         <div id="hero" className="hero md:rounded-lg md:min-h-[500px] min-h-[400px]">
           <div className=" hero-content p-2 justify-end px-16 flex-col lg:flex-row-reverse">
-            <div className="md:w-3/4 text-white ">
+            <div className="md:w-3/4 text-white space-y-3 ">
               <h1 className="text-5xl font-bold">Heaven of <span className="text-yellow-400">Testy</span></h1>
-              <p className="md:py-6 py-2 text-xl">The speciality of a best recipe lies in its ability to delight the senses and leave a lasting impression. It captures the perfect balance of flavors, textures, and aromas. It showcases unique and high-quality ingredients, prepared with precision and expertise.
+              <p className="md:py-6 py-2 md:text-xl">The speciality of a best recipe lies in its ability to delight the senses and leave a lasting impression. It captures the perfect balance of flavors, textures, and aromas.
               </p>
               <button className="btn btn-primary">Explore Recipe</button>
             </div>
