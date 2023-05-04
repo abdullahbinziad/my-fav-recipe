@@ -5,8 +5,9 @@ import { Link } from "react-router-dom";
 
 
 const Header = () => {
+
  
-const {user,logout} = useContext(AuthContext)
+const {user,logout,} = useContext(AuthContext)
 
 console.log(user);
 const menu =
