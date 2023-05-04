@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../authprovider/AuthProvider";
 import { Link } from "react-router-dom";
 import ActiveLink from "./ActiveLink";
-
+import logo from '../assets/imgs/logo.png'
 
 
 const Header = () => {
@@ -22,7 +22,7 @@ const menu =
 </>
 
     return (
-        <div className="w-100 shadow-sm  bg-base-100">
+        <div className="w-100 shadow-md  bg-base-100">
           <nav className="w-3/4 mx-auto  ">
           <div className="navbar">
   <div className="navbar-start">
@@ -36,7 +36,7 @@ const menu =
        }
       </ul>
     </div>
-  <Link className="btn btn-ghost normal-case text-xl"> MyFavRecipe</Link>
+<Link to='/'><img  className=" w-24  " src={logo} alt="" /></Link>
   </div>
   <div className="navbar-center hidden lg:flex">
     <ul className="menu menu-horizontal px-1">
