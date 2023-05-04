@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../authprovider/AuthProvider";
 import { Link } from "react-router-dom";
+import ActiveLink from "./ActiveLink";
 
 
 
@@ -13,10 +14,10 @@ console.log(user);
 const menu =
 <>
 
-<li> <Link to="/">Home</Link> </li>
-<li> <Link to="/about">About</Link> </li>
-<li> <Link to="/blogs">Blog</Link> </li>
-<li> <Link to="/chef">Chefs</Link> </li>
+<li> <ActiveLink to="/">Home</ActiveLink> </li>
+<li> <ActiveLink to="/about">About</ActiveLink> </li>
+<li> <ActiveLink to="/blogs">Blog</ActiveLink> </li>
+<li> <ActiveLink to="/chef">Chefs</ActiveLink> </li>
 
 </>
 
