@@ -1,6 +1,5 @@
 
 import{MdFavorite} from 'react-icons/md'
-import LazyLoad from 'react-lazy-load';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,11 +14,7 @@ const Food = (props) => {
            <div onClick={()=>notify(name)} className="badge border-0 bg-red-700 absolute top-0 right-0 p-3 m-2 cursor-pointer">Add to Fav<MdFavorite className='m-1 text-xl'></MdFavorite> </div>
            <ToastContainer />
 
-        <figure>
-        <LazyLoad height={762}>
-        <img src={image} alt="Shoes" />
-    </LazyLoad>
- </figure>
+        <figure><img src={image} alt="Shoes" /></figure>
        
         <div className="p-3 card-body">
           <h2 className="card-title">
