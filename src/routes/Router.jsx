@@ -18,7 +18,7 @@ export const router= createBrowserRouter([
             {
                 path:'/',
                 element:<Home></Home>,
-                loader: ()=> fetch('http://localhost:3000/food')
+                loader: ()=> fetch('https://my-fav-recipe-server-abdullahbinziad-gmailcom.vercel.app/food')
             },
             {
                 path:'/login',
@@ -32,14 +32,14 @@ export const router= createBrowserRouter([
             {
                 path:'/chef',
                 element: <Chef></Chef>,
-                loader: ()=> fetch(`http://localhost:3000/chef/`)
+                loader: ()=> fetch(`https://my-fav-recipe-server-abdullahbinziad-gmailcom.vercel.app/chef/`)
                 
                 
             },
             {
                 path:'/chef/:id',
                 element: <PrivateRoute> <ChefSingle></ChefSingle> </PrivateRoute>,
-                loader: ({params})=> fetch(`http://localhost:3000/chef/${params.id}`)
+                loader: ({params})=> fetch(`https://my-fav-recipe-server-abdullahbinziad-gmailcom.vercel.app/chef/${params.id}`)
                 
                 
             },
