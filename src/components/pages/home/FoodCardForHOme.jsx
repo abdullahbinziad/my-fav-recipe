@@ -15,7 +15,7 @@ const FoodCardForHOme = (props) => {
           <div className="">
    
             {
-                ingredients.map(n=>   <div className=" badge badge-primary mx-1	">{n}</div>).slice(0,3)
+                ingredients.map(n=>   <div className=" badge badge-primary mx-1	">{n}</div>)
             }
           </div>
         </div>

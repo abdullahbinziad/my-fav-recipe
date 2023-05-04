@@ -37,7 +37,7 @@ const Home = () => {
 
     <h1 className="md:text-5xl text-3xl font-bold text-center my-12">Most <span className="text-red-700">Wanted</span> Recipe</h1>
     <div className="">
-        <div className="grid md:grid-cols-4 grid-cols-2	gap-3">
+        <div className="grid md:grid-cols-3 grid-cols-2	gap-3">
 {
 foods.map(food=><FoodCardForHOme key={food._id} food={food}></FoodCardForHOme> )
 }
