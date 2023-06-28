@@ -28,13 +28,14 @@ export const router= createBrowserRouter([
                 path:'/register',
                 element:<Register></Register>
             },
+         
             
             {
                 path:'/chef',
                 element: <Chef></Chef>,
                 loader: ()=> fetch(`https://my-fav-recipe-server-abdullahbinziad-gmailcom.vercel.app/chef/`)
                 
-                
+    
             },
             {
                 path:'/chef/:id',
