@@ -5,7 +5,8 @@
         My Fav Recipe 2.0
   Author : Abdullah Bin Ziad
   Realese Date: 04/05/23
-  Link: 
+  Live Site: https://my-fav-recipe.web.app/
+  Server side Link:  https://github.com/abdullahbinziad/my-fav-recipe-server.git
 
   #Site Features: 1. Responsive NavBar
                   2. Dinamic Routes
